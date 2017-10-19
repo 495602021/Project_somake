@@ -6,5 +6,5 @@ package com.example.project_somake.Intenfaces;
 public interface HttpCallBack<T> {
     void success(T t);
 
-    void failure();
+    void failure(Throwable t);
 }

@@ -11,7 +11,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
  * Created by 九九乘法表呀一乘一得一呀 on 2017/10/17.
  */
 public class RetrofitsUtlis {
-    private static RetrofitsUtlis utlis;
+    private static RetrofitsUtlis utils;
     private Retrofit retrofit;
 
     private RetrofitsUtlis() {
@@ -23,18 +23,22 @@ public class RetrofitsUtlis {
                 .build();
     }
 
-    private static RetrofitsUtlis getIntences() {
-        if (utlis == null) {
+    public static RetrofitsUtlis getInstance() {
+        if (utils == null) {
             synchronized (RetrofitsUtlis.class) {
-                utlis = new RetrofitsUtlis();
+                if (utils == null) {
+                    utils = new RetrofitsUtlis();
+                }
             }
         }
-        return utlis;
+
+        return utils;
+
     }
 
-    public <T> T create(final Class<T> services) {
-        return retrofit.create(services);
-    }
+    public <T> T create(final Class<T> service) {
 
+        return retrofit.create(service);
+    }
 
 }

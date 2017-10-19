@@ -7,5 +7,4 @@ public interface Concat {
     String BASE_URL = "https://api.yintai.com";
     String NEWSAPI = "/mobile/service";
 
-
 }
