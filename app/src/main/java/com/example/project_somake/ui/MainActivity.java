@@ -1,14 +1,25 @@
 package com.example.project_somake.ui;
 
 
+import android.Manifest;
+import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.os.Build;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.design.widget.TabLayout;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
+import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
+import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.project_somake.ui.prsenter.FindActivity;
 import com.example.project_somake.R;
 import com.example.project_somake.ui.adapter.HomeAdapter;
 import com.example.project_somake.ui.base.BaseActivity;
@@ -22,12 +33,14 @@ import java.util.ArrayList;
 import java.util.Timer;
 import java.util.TimerTask;
 
-public class MainActivity extends BaseActivity {
+public class MainActivity extends BaseActivity implements View.OnClickListener {
     private ViewPager mViewPager;
     private ArrayList<Fragment> mList = new ArrayList<>();
     private ArrayList<String> mTabList = new ArrayList<>();
     private HomeAdapter adapter;
     private TabLayout mTabLayout;
+    private ImageView home_scan;
+    private TextView et_sousuo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,7 +52,31 @@ public class MainActivity extends BaseActivity {
         setBodyView(R.layout.activity_main);
         setFooterView(R.layout.homeacvtivity_footer);
         initView();
+        if(Build.VERSION.SDK_INT>=23){
+            String[] mPermissionList = new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE,
+                    Manifest.permission.ACCESS_FINE_LOCATION,Manifest.permission.CALL_PHONE,
+                    Manifest.permission.READ_LOGS,Manifest.permission.READ_PHONE_STATE,
+                    Manifest.permission.READ_EXTERNAL_STORAGE,Manifest.permission.SET_DEBUG_APP,
+                    Manifest.permission.SYSTEM_ALERT_WINDOW,Manifest.permission.GET_ACCOUNTS,
+                    Manifest.permission.WRITE_APN_SETTINGS};
+            boolean b = checkPermission(mPermissionList);
+            if(b){
+                //执行业务代码
+            }else{
+                ActivityCompat.requestPermissions(this,mPermissionList,123);
+            }
+        }
+
     }
+    public boolean checkPermission(String[] permission){
+        for(String p:permission){
+            if(ContextCompat.checkSelfPermission(this,p)== PackageManager.PERMISSION_GRANTED){
+                return true;
+            }
+        }
+        return false;
+    }
+
 
     /**
      * 重写方法 设置 头部局是否显示
@@ -89,7 +126,6 @@ public class MainActivity extends BaseActivity {
     }
 
 
-
     private void initView() {
         mViewPager = (ViewPager) findViewById(R.id.mViewPager);
         mTabLayout = (TabLayout) findViewById(R.id.mTabLayout);
@@ -118,6 +154,42 @@ public class MainActivity extends BaseActivity {
         fou.setIcon(getResources().getDrawable(R.mipmap.gerenzhongxin1));
         //设置默认选中第一个
         mTabLayout.getTabAt(0).select();
+        home_scan = (ImageView) findViewById(R.id.home_scan);
+        home_scan.setOnClickListener(this);
+        et_sousuo = (TextView) findViewById(R.id.et_sousuo);
+        et_sousuo.setOnClickListener(this);
     }
 
+   
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.et_sousuo:
+                Intent intent = new Intent(this, FindActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.home_scan:
+                Toast.makeText(this, "未实现", Toast.LENGTH_SHORT).show();
+                break;
+        }
+    }
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        Log.i("TAG",grantResults.toString());
+        boolean b = checkPermission(permissions);
+        if(true){
+            //业务代码
+        }else{
+            finish();
+        }
+    }
+
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+    }
 }

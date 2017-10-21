@@ -23,10 +23,14 @@
         android:src="@mipmap/s"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true" />
-    <EditText
+    <TextView
+        android:background="@drawable/shape1"
+        android:id="@+id/et_sousuo"
+        android:gravity="center|left"
         android:layout_marginRight="20dp"
         android:layout_marginLeft="20dp"
         android:paddingLeft="10dp"
+        android:layout_marginTop="15dp"
         android:layout_toRightOf="@id/title"
         android:layout_toLeftOf="@+id/home_scan"
         android:drawableLeft="@mipmap/em_search_bar_icon_normal"
