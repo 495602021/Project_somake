@@ -1,0 +1,87 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+
+
+    <LinearLayout
+        android:visibility="visible"
+        android:id="@+id/ll_login_text"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:text="银泰护照即银泰门店会员账号，一般为手机号，如未设置密码或忘记密码可点击“忘记密码”进行找回" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:text="推荐您使用银泰护照进行登录。使用银泰护照登录，将可在线享受银泰会员的一些权益，并与您线上账号进制关联，确保您的会员权益最大化？" />
+    </LinearLayout>
+    <LinearLayout
+        android:visibility="gone"
+        android:orientation="vertical"
+        android:id="@+id/ll_login_text2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="——————使用其他账号登录———————"
+            android:layout_gravity="center_horizontal" />
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="微信"
+                android:gravity="center"
+                android:id="@+id/iv_login_wei"
+                android:drawableTop="@mipmap/wei"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:text="QQ"
+                android:gravity="center"
+                android:id="@+id/iv_login_qq"
+                android:drawableTop="@mipmap/qq"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:text="支付宝"
+                android:gravity="center"
+                android:id="@+id/iv_login_zhi"
+                android:drawableTop="@mipmap/zhi"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:text="新浪"
+                android:gravity="center"
+                android:id="@+id/iv_login_xinlang"
+                android:drawableTop="@mipmap/xinlang"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
