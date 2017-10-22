@@ -211,6 +211,7 @@ public class PersonalCenterFragment extends Fragment implements View.OnClickList
                 startActivity(new Intent(context, IdeaActivity.class));
                 //意见反馈
                 break;
+            //
             case R.id.ll_phone:
                 //客服电话
                 Toast.makeText(context, "拨打电话", Toast.LENGTH_SHORT).show();
