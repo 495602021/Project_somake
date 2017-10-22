@@ -401,8 +401,6 @@ public class HomeListViewUtils {
             this.rootView = rootView;
             this.mCarouselFigure = (FlyBanner) rootView.findViewById(R.id.mCarouselFigure);
         }
-
-
     }
 
 }

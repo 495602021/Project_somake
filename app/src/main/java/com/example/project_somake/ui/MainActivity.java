@@ -99,8 +99,8 @@ public class MainActivity extends BaseActivity {
         mList.add(new ShoppingCartFragment());
         mList.add(new PersonalCenterFragment(MainActivity.this));
         mTabList.add("首页");
-        mTabList.add("特卖");
         mTabList.add("分类");
+        mTabList.add("特卖");
         mTabList.add("购物车");
         mTabList.add("我的银泰");
         adapter = new HomeAdapter(getSupportFragmentManager(), mList, mTabList);

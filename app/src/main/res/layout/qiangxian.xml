@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    tools:context=".ui.WelcomeActivity">
+    <android.support.design.widget.TabLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tab"
+        ></android.support.design.widget.TabLayout>
+    <com.example.project_somake.ui.base.MyViewPage
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/pager_view"
+        android:persistentDrawingCache="animation"
+        ></com.example.project_somake.ui.base.MyViewPage>
+</LinearLayout>

@@ -102,7 +102,6 @@ public class GetPhonePropertiesUtils {
         String operator = telManager.getSimOperator();
 
         if (operator != null) {
-
             if (operator.equals("46000") || operator.equals("46002") || operator.equals("46007")) {
 
                 //中国移动
