@@ -94,8 +94,8 @@ public class MainActivity extends BaseActivity {
         mViewPager = (ViewPager) findViewById(R.id.mViewPager);
         mTabLayout = (TabLayout) findViewById(R.id.mTabLayout);
         mList.add(new HomePageFragment());
-        mList.add(new SpecialOfferFragment());
         mList.add(new ClassificationFragment());
+        mList.add(new SpecialOfferFragment());
         mList.add(new ShoppingCartFragment());
         mList.add(new PersonalCenterFragment(MainActivity.this));
         mTabList.add("首页");
