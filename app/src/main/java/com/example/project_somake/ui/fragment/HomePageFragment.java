@@ -23,7 +23,6 @@ import java.util.List;
 import java.util.Map;
 
 
-
 /**
  * -------- This is 羊驼! -------
  * 　　　┏┓　　　┏┓
@@ -83,8 +82,7 @@ public class HomePageFragment extends Fragment implements IhomePageView<HomeBean
         mParams.put("pageid", "104001");
         mParams.put("pageindex", "1");
         mParams.put("ver", "3.0");
-        presenter.request(getActivity(),mParams);
-
+       presenter.request(getActivity(),mParams);
         return listView;
     }
 

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f1f1f1"
+    android:orientation="vertical"
+    tools:context=".mycenter.RegisterActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#fff">
+
+        <ImageView
+            android:id="@+id/iv_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:src="@mipmap/def_btn_return_1" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:text="创建护照"
+            android:textSize="22sp" />
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/tv_title2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:id="@+id/et_name"
+        android:background="@drawable/demo3"
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="  请输入手机号"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <EditText
+            android:id="@+id/et_yan"
+            android:background="@drawable/demo3"
+            android:layout_width="0dp"
+            android:layout_weight="5"
+            android:layout_height="50dp"
+            android:hint="  请输入验证码"/>
+        <Button
+            android:id="@+id/bt_yanzheng"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:background="@drawable/demo"
+            android:layout_height="wrap_content"
+            android:text="获取验证码"/>
+    </LinearLayout>
+    <EditText
+        android:id="@+id/et_pass"
+        android:background="@drawable/demo3"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:password="true"
+        android:hint="  请输入密码"/>
+    <TextView
+        android:layout_marginTop="20dp"
+        android:text="请设置密码（6到12位，英文加数字）"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:layout_marginTop="20dp"
+        android:text="注册关联银泰护照后您可使用护照直接登录银泰网，银泰护照既银泰百货会员，注册后，在银泰百货商场可享受会员待遇，并可共享积分等权益"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_content" />
+    <Button
+        android:id="@+id/bt_zhuche"
+        android:text="创建银泰护照"
+        android:visibility="gone"
+
+        android:textColor="#ff7ba9"
+        android:background="@drawable/demo4"
+        android:layout_marginTop="20dp"
+        android:ems="20"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/bt_zhuche_2"
+        android:text="创建银泰护照"
+        android:textColor="#aaa"
+        android:visibility="visible"
+        android:background="@drawable/demo"
+        android:layout_marginTop="20dp"
+        android:ems="20"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

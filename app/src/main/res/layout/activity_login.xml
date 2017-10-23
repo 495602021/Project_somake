@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".mycenter.LoginActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+
+        android:layout_height="50dp"
+        android:background="#fff">
+
+        <ImageView
+            android:id="@+id/iv_login_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:src="@mipmap/def_btn_return_1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:text="登录"
+            android:textSize="22sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#f55"
+            android:text="注册"
+            android:id="@+id/tv_login_add"
+            android:layout_alignTop="@+id/iv_login_left"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_height="50dp">
+        <TextView
+            android:layout_width="0dp"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:text="银泰护照"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_login_hu" />
+        <TextView
+            android:layout_width="0dp"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:text="银泰网账号"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_login_zhang" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/et_log_name"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/demo3"
+        android:hint="请输入手机号" />
+
+    <EditText
+        android:id="@+id/et_log_pass"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/demo3"
+
+        android:hint="请输入密码"
+        android:password="true" />
+
+    <Button
+        android:id="@+id/bt_login_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:background="@drawable/loginbutton"
+        android:text="登录"
+        android:textColor="#fff" />
+
+    <TextView
+        android:id="@+id/tv_wang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:text="忘记密码？" />
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_login"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></android.support.v4.view.ViewPager>
+
+
+</LinearLayout>

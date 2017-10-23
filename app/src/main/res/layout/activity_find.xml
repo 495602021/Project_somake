@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_find"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.project_somake.ui.prsenter.FindActivity">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@mipmap/def_btn_return_1"
+        android:id="@+id/imageView"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="12dp" />
+
+    <EditText
+        android:layout_toRightOf="@+id/imageView"
+        android:layout_toLeftOf="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:inputType="none"
+        android:hint="请输入商品名称"
+        android:ems="10"
+        android:layout_marginBottom="5dp"
+        android:layout_alignParentTop="true"
+        android:id="@+id/find"
+        style="@android:style/Widget.EditText" />
+
+    <TextView
+        android:text="取消"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="5dp"
+        android:layout_alignTop="@+id/imageView"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/textView" />
+
+    <LinearLayout
+        android:id="@+id/find_lin"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/find"
+        android:layout_alignParentStart="true">
+        <RadioGroup
+            android:id="@+id/mRadioGroup"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RadioButton
+                android:text="热门品牌"
+                android:button="@null"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:textSize="18sp"
+                android:background="@drawable/radiobutton_shape"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_below="@+id/textView"
+                android:layout_alignEnd="@+id/find"
+                android:id="@+id/mRadioButton" />
+
+            <RadioButton
+                android:text="热门搜索"
+                android:button="@null"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:layout_weight="1"
+                android:background="@drawable/radiobutton_shape"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_below="@+id/find"
+                android:id="@+id/mRadioButton2" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/find_lin2"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/find_lin"
+
+        >
+        <TextView
+            android:text="TextView"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+             />
+        <TextView
+            android:gravity="center"
+            android:text="TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            />
+        <TextView
+        android:text="TextView"
+            android:gravity="center"
+            android:layout_weight="1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/find_lin3"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/find_lin2"
+      >
+        <TextView
+            android:text="TextView"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            />
+        <TextView
+            android:text="TextView"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            />
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>
